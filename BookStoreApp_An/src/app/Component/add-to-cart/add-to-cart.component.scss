@@ -1,0 +1,256 @@
+.headercolor {
+  background: #a03037 0% 0% no-repeat padding-box;
+  height: 60px;
+  opacity: 1;
+  font: normal normal normal 20px/26px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.mat-toolbar {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 10%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+
+.cart {
+  text-align: center;
+  top: 23px;
+  margin-left: 50%;
+  width: 20px;
+  height: 13px;
+  text-align: left;
+  font: normal normal normal 15px/13px Roboto;
+  letter-spacing: 0.45px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.example-card {
+  width: 774px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 1px;
+margin-left: 10% !important;
+height: 300px;
+    overflow: scroll;
+}
+.mat-card-image {
+  width: 75%;
+}
+.example-card1 {
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 1px;
+margin-left: 10% !important;
+height: 300px;
+    overflow: scroll;
+}
+.card-header-text {
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+}
+.card-container {
+  width: 774px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 1px;
+    margin-top: 48px;
+    margin-left: 10%;
+}
+.example-card {
+  padding: 0px;
+  margin: 16px;
+}
+.card-action-container {
+  background-color: white;
+  padding: 16px;
+}
+
+.mat-card-image:first-child {
+    margin-top: 16px;
+}
+.mat-card-title {
+    text-transform: capitalize;
+    top: 322px;
+left: 196px;
+// width: 132px;
+height: 17px;
+text-align: left;
+font: normal normal normal 14px/17px Lato;
+letter-spacing: 0px;
+color: #0A0102;
+opacity: 1;
+}
+.mat-card-subtitle {
+text-transform: capitalize;
+top: 340px;
+left: 196px;
+width: 63px;
+height: 12px;
+text-align: left;
+font: normal normal normal 10px/12px Lato;
+letter-spacing: 0px;
+color: #9D9D9D;
+opacity: 1;
+}
+.image-header{
+  margin-left: -16px;
+}
+
+.header {
+  position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+
+.logout{
+margin-left: 40%;
+border: 1px solid #9D9D9D;
+border-radius: 2px;
+opacity: 1;
+// margin-left: 5%;
+font: normal normal normal 10px/26px Roboto;
+letter-spacing: 0px;
+color: #0A0102;;
+text-transform: capitalize;
+}
+
+.main-class{
+  display: flex;
+  flex-direction: column;
+  // border: 1px solid black;
+  
+}
+.card-container {
+    box-shadow: 1px 2px 12px 6px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+
+.info{
+  padding-right: 40px;
+}
+
+.placed-order{
+  padding-left: 120px;
+  margin-top: 150px;
+}
+
+.primary{
+  background: #3371B5 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1;
+  
+}
+.name-space{
+  align-self: center;
+}
+// form css
+
+.login_card {
+  /* width: 100%; */
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 1px 2px 12px 6px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.form-field{
+  display: block
+}
+.example-container .mat-form-field + .mat-form-field {
+margin-left: 8px;
+}
+.main-wrapper{
+position: absolute;
+width: 40%;
+margin-left: 30%;
+margin-right: 20%;
+margin-top: 10%;
+
+}
+
+.title-header{
+margin-top: 3%;
+
+font: normal normal normal 15px/26px Roboto;
+letter-spacing: 0px;
+color: #333232;
+text-transform: capitalize;
+opacity: 1;
+text-align: left;
+margin-bottom: 5%;
+}
+.checkout-btn{
+  margin-left: 590px;
+  width: 120px;
+  background-color: #3371B5;
+}
+.space{
+  padding: 50px;
+}
+
+.label-space{
+  margin-bottom: 2%;
+}
+.book-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.cart-header {
+  position: sticky;
+    top: 0px;
+    background: #fff;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+}
+.cart-header1 {
+  position: sticky;
+  top: -16px;
+    background: #fff;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+}
+.cart-action {
+  position: sticky;
+    /* float: right; */
+    bottom: 0px;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.space-btn-left{
+  margin-right: 10px;
+  align-self: center;
+ }
+.space-btn-right{
+  margin-left: 10px;
+  align-self: center;
+}
+.mat-stroked-button {
+  line-height: 20px;
+  padding-top: 3%;
+  padding-bottom: 1%;
+ 
+}
+
+.footer-space{
+  margin-bottom: 50px;
+}
+

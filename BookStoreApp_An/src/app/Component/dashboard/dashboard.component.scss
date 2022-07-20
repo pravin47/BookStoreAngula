@@ -1,0 +1,141 @@
+.headercolor {
+  background: #a03037 0% 0% no-repeat padding-box;
+  height: 60px;
+  opacity: 1;
+  font: normal normal normal 20px/26px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.mat-toolbar {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 10%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+
+.cart {
+  text-align: center;
+  top: 23px;
+  margin-left: 70%;
+  width: 20px;
+  height: 13px;
+  text-align: left;
+  font: normal normal normal 15px/13px Roboto;
+  letter-spacing: 0.45px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.example-card {
+  width: 233px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 2px 2px 0px 0px;
+  opacity: 1;
+}
+.mat-card-image {
+  width: 100%;
+}
+.card-header-text {
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+}
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 48px;
+}
+.example-card {
+  padding: 0px;
+  margin: 16px;
+}
+.card-action-container {
+  background-color: white;
+  padding: 16px;
+}
+
+.mat-card-image:first-child {
+    margin-top: 16px;
+}
+.mat-card-title {
+    text-transform: capitalize;
+    top: 322px;
+left: 196px;
+// width: 132px;
+height: 17px;
+text-align: left;
+font: normal normal normal 14px/17px Lato;
+letter-spacing: 0px;
+color: #0A0102;
+opacity: 1;
+}
+.mat-card-subtitle {
+text-transform: capitalize;
+top: 340px;
+left: 196px;
+width: 63px;
+height: 12px;
+text-align: left;
+font: normal normal normal 10px/12px Lato;
+letter-spacing: 0px;
+color: #9D9D9D;
+opacity: 1;
+}
+.image-header{
+  margin-left: -16px;
+}
+
+.header {
+  position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.add-bag{
+  // top: 392px;
+  // left: 196px;
+  width: 93px;
+  height: 29px;
+  background: #A03037 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  font: normal normal normal 10px/26px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-right: 5%;
+  text-decoration: none;
+}
+.add-wishlist{
+// top: 391px;
+// left: 304px;
+width: 83px;
+height: 30px;
+border: 1px solid #9D9D9D;
+border-radius: 2px;
+opacity: 1;
+margin-left: 5%;
+font: normal normal normal 10px/26px Roboto;
+letter-spacing: 0px;
+color: #0A0102;;
+text-transform: capitalize;
+}
+
+.logout{
+margin-left: 20%;
+border: 1px solid #9D9D9D;
+border-radius: 2px;
+opacity: 1;
+// margin-left: 5%;
+font: normal normal normal 10px/26px Roboto;
+letter-spacing: 0px;
+color: #0A0102;;
+text-transform: capitalize;
+}

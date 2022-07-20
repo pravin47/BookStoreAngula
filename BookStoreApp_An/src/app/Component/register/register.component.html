@@ -1,0 +1,69 @@
+
+  <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center" >
+    <mat-card class="box login_card" >
+      <div class="logo">
+        <img src="../../../assets/imaage/education.svg" alt="logo" style="width: 50px; height: 85px;">
+      </div>
+      <!-- <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header> -->
+      <mat-card class="title-header">Registration Form</mat-card>
+      
+      <form class="example-form" [formGroup] = "Register" (ngSubmit)="onSubmit()">
+        <mat-card-content>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>First name</mat-label>
+                <input matInput formControlName="firstName">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label> Last Name</mat-label>
+                <input matInput formControlName="lastName">
+              </mat-form-field>
+            </div>
+          </div>
+         <div class="row">
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>DOB</mat-label>
+                  <input type="text" matInput placeholder="25" formControlName="dob">
+                   </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>expiryDate</mat-label>
+                <input type="tel" matInput placeholder="555-555-1234" formControlName="expiryDate">
+                </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="email" formControlName="emailId">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Password" formControlName="password">
+              </mat-form-field>
+            </div>
+           
+          </div>
+        </div>
+        </mat-card-content>
+        <div>
+          <a routerLink="/login" mat-button target="_self">Go To Login Page</a>
+        </div>
+        <div>
+          <button mat-raised-button type="submit" class="login_button">Sign In </button>
+        </div>
+        
+      </form>
+    </mat-card>
+  </div>

@@ -1,0 +1,33 @@
+
+.mat-flat-button {
+    margin-bottom: 20px;
+}
+
+table {
+    position: relative;
+    left: 50%;
+    transform: translate(-55%, -10%);
+}
+
+th {
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+    color: #333232;
+}
+.centered {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'lato';
+  }

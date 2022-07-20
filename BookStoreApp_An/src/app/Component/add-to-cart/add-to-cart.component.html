@@ -1,0 +1,175 @@
+<div class="main-class">
+  <!-- header -->
+  <app-header></app-header>
+   <div *ngIf="!isCheckout">
+  <mat-card class="example-card">
+      <mat-card-header class="cart-header">
+          My cart(2)
+      </mat-card-header>
+        <div *ngFor="let cart of cartList">
+          <div class="book-container">
+            <mat-card-header class="card-header-text image-header">
+              <img mat-card-image src="../../../assets/imaage/bookimage/{{cart.book.logo}}.png" alt="Images">
+            </mat-card-header>
+              <mat-card-content style="margin-left: 10%; align-self: center;">
+                <mat-card-title>{{cart.book.bookName}}</mat-card-title>
+                <mat-card-subtitle>{{cart.book.author}}</mat-card-subtitle>
+                <mat-card-title>Rs.{{cart.book.price}}</mat-card-title>
+                <mat-card-title>
+                  <a color="primary" class="space-btn-left" (click)="decrement(cart.id, cart.book.id)"><mat-icon>remove_circle</mat-icon></a>
+                    <button mat-stroked-button class="space-btn">{{quantityObj[cart.id]}}</button>
+                  <a color="primary" class="space-btn-right" (click)="increment(cart.id, cart.book.id)"><mat-icon>add_circle</mat-icon></a>
+                  <a mat-button class="remveButton" (click)="removeFromCart(cart.id)">Remove</a>
+                </mat-card-title> 
+                 
+              </mat-card-content>
+          </div>
+          <mat-card-actions class="cart-action" *ngIf="!showCustomerDetails">
+            <button mat-raised-button class="primary" (click)="placeOrder(cart)">Placed Order</button>
+          </mat-card-actions>
+      </div>
+    </mat-card>
+  <!-- form -->
+  <mat-card  class="card-container" >
+    <!-- <mat-card class="title-header">Customer Details</mat-card> -->
+    <mat-card-title>Customer Details</mat-card-title>
+    <form class="example-form" [formGroup] = "AddCart"  *ngIf="showCustomerDetails">
+      <mat-card-content>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Name</mat-label>
+              <input type="text" matInput formControlName="firstName">
+              <mat-error *ngIf="!AddCart.controls['firstName'].valid">
+                Name is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Phone Number</mat-label>
+              <input type="tel" matInput formControlName="phoneNumber">
+              <mat-error *ngIf="!AddCart.controls['phoneNumber'].valid">
+                Phone number is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+       <div class="row">
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Pincode</mat-label>
+                <input type="text" matInput placeholder="440034" formControlName="pincode">
+              <mat-error *ngIf="!AddCart.controls['pincode'].valid">
+                Pincode is Required
+              </mat-error>   
+              </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Locality</mat-label>
+              <input type="text" matInput placeholder="Indian" formControlName="locality">
+              <mat-error *ngIf="!AddCart.controls['locality'].valid">
+                Locality is required
+              </mat-error>  
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Address</mat-label>
+              <input type="text" matInput placeholder="Address" formControlName="address">
+              <mat-error *ngIf="!AddCart.controls['address'].valid">
+                Address is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>City/Town</mat-label>
+              <input type="text" matInput placeholder="City" formControlName="city">
+              <mat-error *ngIf="!AddCart.controls['city'].valid">
+                City/Town is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>LandMark</mat-label>
+              <input type="text" matInput placeholder="LaandMaark" formControlName="landmark">
+              <mat-error *ngIf="!AddCart.controls['landmark'].valid">
+                LandMark is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="label-space">
+          <label for="gender">Type:</label>
+        </div>
+        <div>
+          <span>
+            <input id="home" type="radio" value="Home" name="type" formControlName="type">
+            <label for="male">Home</label>
+          </span>
+         <span class="space">
+          <input id="work" type="radio" value="Work" name="type" formControlName="type">
+          <label for="female">Work</label>  
+         </span>
+          <span class="space">
+            <input id="other" type="radio" value="Other" name="type" formControlName="type">
+            <label for="female">Other</label>
+          </span>
+       </div> <br>
+       <button mat-flat-button class="checkout-btn" [disabled]="!AddCart.valid" (click)="continue()">Continue</button>
+      </div>
+      </mat-card-content>
+    </form>
+  </mat-card>
+
+  <!-- Order Summary -->
+  <mat-card  class="card-container" >
+    <mat-card-title>Order Summary</mat-card-title>
+      <div *ngIf="showOrderDetails">
+          <mat-card class="example-card1">
+              <mat-card-header class="cart-header1">
+                My cart(2)
+              </mat-card-header>
+              <div >
+                  <div class="book-container">
+                    <mat-card-header class="card-header-text image-header">
+                      <img mat-card-image src="../../../assets/imaage/bookimage/{{selectedCart.book.logo}}.png" alt="Images">
+                    </mat-card-header>
+                    <mat-card-content style="margin-left: 10%; align-self: center;">
+                      <mat-card-title>{{selectedCart.book.bookName}}</mat-card-title>
+                      <mat-card-subtitle>{{selectedCart.book.author}}</mat-card-subtitle>
+                      <mat-card-title>Rs.{{selectedCart.book.price}}</mat-card-title>
+                      <mat-card-title>Quantity: {{selectedCart.quantity}}</mat-card-title>
+                    </mat-card-content>
+                  </div>
+             </div>
+          <mat-card-actions class="cart-action" >
+            <button mat-raised-button class="primary" (click)="checkout()">Checkout</button>
+          </mat-card-actions>
+         </mat-card>
+      </div>
+</mat-card>
+</div>
+<div *ngIf="isCheckout">
+<app-place-order
+[parentData] = 'checkoutData'
+></app-place-order>
+</div>
+</div>
+<div class="footer-space">
+  
+</div>
+<app-footer></app-footer>
+
+ 
+ 
+ 
+  
